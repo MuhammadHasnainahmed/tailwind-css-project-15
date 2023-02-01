@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <nav class="flex flex-row justify-between p-10 items-center ">
+     <div class="flex items-center">
+        <div>
+        <img src="./img/logo.svg" alt="logo">
+    </div>
+
+        <div class="ml-5">
+            <ul class="hidden flex-row items-end space-x-16 font-semibold cursor-pointer lg:flex">
+                <div>
+
+                <div class=" flex  flex-row justify-center items-center space-x-2 relative  openToggle">
+                    <li>Features</li>
+                    <img src="img/icon-arrow-up.svg" alt="" class=" h-2 w-auto masterarrow" >
+                  </div>
+                  <div class="bg-white rounded-lg text-black space-y-2 p-3 mt-3 ml-4 absolute open1 hidden">
+
+                    <div class="flex flex-row space-x-3">
+                        <img src="img/icon-todo.svg" alt="Todo">
+                        <p>Todo List</p>
+                    </div>
+
+                    <div class="flex flex-row space-x-3">
+                      <img src="img/icon-calendar.svg" alt="Calendar">
+                      <p>Calendar</p>
+                    </div>
+
+                    <div class="flex flex-row space-x-3">
+                      <img src="img/icon-reminders.svg" alt="Reminders">
+                      <p>reminders</p>
+                    </div>
+
+                    <div class="flex flex-row space-x-3">
+                      <img src="img/icon-planning.svg" alt="Planning">
+                      <p>Planning</p>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+            <div>
+                <div class=" flex  flex-row justify-center items-center space-x-2 relative openToggle2">
+                    <li>Company</li>
+                    <img src="img/icon-arrow-up.svg" alt="" class="h-2 w-auto masterarrow">
+                  </div>
+                  <div class="bg-white rounded-lg text-black space-y-2 p-3 mt-3 ml-4 absolute open2 hidden">
+                    <div class="flex flex-row space-x-3">
+                        <p>History</p>
+                    </div>
+                    <div class="flex flex-row space-x-3">
+                      <p>Our Team</p>
+                  </div>
+
+                  <div class="flex flex-row space-x-3">
+                      <p>Blog</p>
+                  </div>
+                </div>
+
+                
+            </div>
+
+
+            
+                <li>Careers</li>
+                <li>About</li>
+            </ul>
+            
+        </div>
+        
+    </div>
+    
+    
+    <div class="flex justify-center items-center space-x-2">
+        <button class=" w-28 p-2 rounded-2xl   hover:border-solid hover:border-2 hover:border-black font-semibold transition-colors hidden lg:block">Login</button>
+        <button class=" w-28 p-2 rounded-2xl   hover:border-solid hover:border-2 hover:border-black font-semibold transition-colors hidden lg:block">Register</button>
+    </div>
+    <!-- hamburger -->
+     
+    
+    <div id="hamburger" class="visible lg:hidden" onclick="show()">
+        <img  src="img/icon-menu.svg" alt="" class="w-5 h-3 ">
+    </div>
+   </nav>
+
+
+   <!-- hamburger div -->
+
+   <div class="bg-white h-[100vh]  w-56 pt-3 pl-4 absolute top-0  right-0 hidden" id="menu">
+   <div class="pt-5"> 
+            
+
+         <img class="items-end" onclick="show()" src="img/icon-close-menu.svg" alt="icon-close-menu">
+         
+         <div>
+         
+         <ul class="  flex-col space-y-3 items-end  pt-3 font-semibold cursor-pointer  mt-10 ">
+            <div class="">
+                <!-- Features -->
+                <div class=" flex  flex-row items-center space-x-2 ">
+                  <li>Features</li>
+                  <img src="img/icon-arrow-up.svg" alt="" class="h-2 w-auto">
+                </div>
+                  <div class="bg-white text-black space-y-2 p-3 mt-3 ml-4">
+
+                      <div class="flex flex-row space-x-3">
+                          <img src="img/icon-todo.svg" alt="Todo">
+                          <p>Todo List</p>
+                      </div>
+
+                      <div class="flex flex-row space-x-3">
+                        <img src="img/icon-calendar.svg" alt="Calendar">
+                        <p>Calendar</p>
+                      </div>
+
+                      <div class="flex flex-row space-x-3">
+                        <img src="img/icon-reminders.svg" alt="Reminders">
+                        <p>reminders</p>
+                      </div>
+
+                      <div class="flex flex-row space-x-3">
+                        <img src="img/icon-planning.svg" alt="Planning">
+                        <p>Planning</p>
+                      </div>
+
+                  </div>
+
+                  <!-- Company -->
+            
+            <div class=" flex  flex-row items-center space-x-2">
+                <li>Company</li>
+                <img src="img/icon-arrow-up.svg" alt="" class="h-2 w-auto">
+              </div>
+                <div class="bg-white text-black space-y-2 p-3 mt-3 ml-4">
+                    <div class="flex flex-row space-x-3">
+                        <p>History</p>
+                    </div>
+                    <div class="flex flex-row space-x-3">
+                      <p>Our Team</p>
+                  </div>
+
+                  <div class="flex flex-row space-x-3">
+                      <p>Blog</p>
+                  </div>
+                </div>
+
+            </div>
+            <li>Careers</li>
+            <li>About</li>
+        </ul>
+
+    </div>
+    <!--  -->
+    <div class="flex flex-col justify-center text-center items-center space-y-6 pt-10 ">
+        <button class=" w-40 p-2 rounded-2xl   hover:border-solid hover:border-2 hover:border-black font-semibold transition-colors ">Login</button>
+        <button class=" w-40 p-2 rounded-2xl   hover:border-solid hover:border-2 hover:border-black font-semibold transition-colors ">Register</button>
+    </div>
+    </div>
+
+   
+</div>
+
+
+   <header class=" ">
+
+     <div class="flex flex-col justify-evenly items-center lg:flex-row ">
+         
+         
+            <div class=" max-w-3xl p-3 order-1 lg:order-none text-center lg:text-left  flex flex-col justify-center items-center lg:items-start">
+                <div class="font-bold text-3xl sm:text-4xl md:text-6xl flex flex-row space-x-2 lg:flex-col lg:space-x-0 lg:text-8xl pt-5 lg:pt-0">
+                    <p>Make</p>
+                    <p>remote work</p>
+                </div>
+                <div class="max-w-sm mt-16">
+                    <p class="opacity-70">Get your team in sync,no matter your location streamline processes, create team riruals, and watch productivity soar.</p>
+                    <button class=" w-36 p-3  mt-10 rounded-2xl bg-black text-white lg:bg-white lg:text-black   hover:border-solid hover:border hover:border-black font-bold text-lg ">Learn more</button>
+                </div>
+                <div class="flex flex-row space-x-2 md:space-x-5  w-auto pt-10 lg:space-x-7">
+                    <img class="w-20" src="img/client-databiz.svg" alt="client-databiz">
+                    <img class="w-20" src="img/client-audiophile.svg" alt="client-audiophile">
+                    <img class="w-20" src="img/client-meet.svg" alt="client-meet">
+                    <img class="w-20" src="img/client-maker.svg" alt="client-maker">
+                </div>
+            </div>
+            <div class=" max-w-3xl items-center flex justify-center">
+                <img src="img/image-hero-desktop.png" alt="" class="w-2/3    hidden lg:block ">
+                <!--  -->
+                <img src="img/image-hero-mobile.png" alt="" class="w-full visible lg:hidden">
+
+
+            </div>
+          </div>
+         
+     
+   </header>
+
+    <script src="script.js"></script>
+</body>
+</html>
